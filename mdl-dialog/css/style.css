@@ -1,0 +1,56 @@
+
+.mdl-dialog {
+  border:none;
+  box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+  width: 1000px;
+  height: 25px;
+  border-left: 60px solid #1a237e;
+  border-right: 60px solid #1a237e;
+  color:#1a237e;
+  text-transform: capitalize;
+  text-align: center;
+}
+.mdl-dialog__title {
+  /*padding:;
+  margin: 0;*/
+  text-align: center;
+  font-size: 1.5rem;
+  display: inline;
+}
+.mdl-dialog__actions {
+  /*padding: 8px 8px 8px 24px;*/
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: -35px;
+}
+.mdl-dialog__actions > * {
+  /*margin-right:;*/
+  height: 36px;
+}
+.mdl-dialog__actions > *:first-child {
+  /*margin-right:;/*
+}
+
+.mdl-dialog__actions--full-width {
+  /*padding: 0 0 8px 0;*/
+}
+.mdl-dialog__actions--full-width > * {
+  /*height: 48px;*/
+  -webkit-flex: 0 0 90%;
+  -ms-flex: 0 0 90%;
+  flex: 0 0 90%;
+  /*padding-right: 16px;*/
+  margin-right: 0;
+  text-align: right;
+}
+.mdl-dialog__content {
+  /*padding: 20px 24px 24px 24px;*/
+  color: rgba(0,0,0, 0.54);
+}

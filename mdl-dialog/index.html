@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>MDL Dialog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.css'>
+    <link rel='stylesheet prefetch' href='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+
+
+
+  </head>
+
+  <body>
+
+<button class="mdl-button mdl-button--raised mdl-js-button dialog-button">Show Dialog</button>
+
+<dialog id="dialog" class="mdl-dialog animated bounceInDown">
+  <h4 class="mdl-dialog__title">Are you sure to delete?</h4>
+  <div class="mdl-dialog__content">
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button mdl-button--raised mdl-js-button mdl-button--primary">NO</button>&nbsp;&nbsp; &nbsp;
+      <button type="button" class="mdl-button mdl-button--raised mdl-button--accent">YES</button>
+    </div>
+  </div>
+
+</dialog>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.js'></script>
+<script src='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js'></script>
+<script>
+(function() {
+  'use strict';
+  var dialogButton = document.querySelector('.dialog-button');
+  var dialog = document.querySelector('#dialog');
+  if (!dialog.showModal) {
+    dialogPolyfill.registerDialog(dialog);
+  }
+  dialogButton.addEventListener('click', function() {
+    dialog.showModal('5000');
+  });
+  dialog.querySelector('button:not([disabled])')
+    .addEventListener('click', function() {
+      dialog.close('bounceInUp');
+    });
+}());
+
+</script>
+
+
+
+  </body>
+</html>
